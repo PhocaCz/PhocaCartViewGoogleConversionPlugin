@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="pcv" method="upgrade" version="4.0">
+	<name>plg_pcv_google_conversion</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>07/09/2022</creationDate>
+	<authorEmail></authorEmail>
+	<authorUrl>https://www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>4.0.4</version>
+	<description>PLG_PCV_GOOGLE_CONVERSION_DESCRIPTION</description>
+	<projectName>PhocaCartViewGoogleConversionPlugin</projectName>
+
+	<files>
+		<folder>helpers</folder>
+		<filename plugin="google_conversion">index.html</filename>
+		<filename plugin="google_conversion">google_conversion.php</filename>
+		<filename plugin="google_conversion">manifest.xml</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcv_google_conversion.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcv_google_conversion.sys.ini</language>
+	</languages>
+
+	<administration>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcv_google_conversion.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcv_google_conversion.sys.ini</language>
+		</languages>
+	</administration>
+	<form>
+		<config>
+			<fields name="params" addfieldpath="/administrator/components/com_phocacart/models/fields">
+			<fieldset name="basic" label="PLG_PCV_GOOGLE_CONVERSION_BASIC_OPTIONS" group="pcv">
+				<field name="enable_google_analytics_purchase" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_PCV_GOOGLE_CONVERSION_FIELD_ENABLE_GOOGLE_ANALYTICS_PURCHASE_CONVERSION_LABEL" description="PLG_PCV_GOOGLE_CONVERSION_FIELD_ENABLE_GOOGLE_ANALYTICS_PURCHASE_CONVERSION_DESC">
+                <option value="0">PLG_PCV_GOOGLE_CONVERSION_NO</option>
+                <option value="1">PLG_PCV_GOOGLE_CONVERSION_YES</option>
+            </field>
+			</fieldset>
+			</fields>
+		</config>
+
+</form>
+	
+
+	<updateservers>
+		<server type="extension" name="PLG_PCV_GOOGLE_CONVERSION" priority="1"><![CDATA[https://raw.githubusercontent.com/PhocaCz/PhocaCartViewGoogleConversionPlugin/main/manifest.xml]]></server>
+	</updateservers>
+</extension>
