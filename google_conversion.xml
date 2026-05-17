@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" group="pcv" method="upgrade" version="4.0">
+<extension type="plugin" group="pcv" method="upgrade" version="6.0">
 	<name>plg_pcv_google_conversion</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>07/09/2022</creationDate>
+	<creationDate>16/05/2026</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>
 	<license>GNU/GPL</license>
-	<version>4.0.4</version>
+	<version>6.1.0</version>
 	<description>PLG_PCV_GOOGLE_CONVERSION_DESCRIPTION</description>
 	<projectName>PhocaCartViewGoogleConversionPlugin</projectName>
 

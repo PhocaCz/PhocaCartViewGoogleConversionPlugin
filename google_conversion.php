@@ -18,7 +18,13 @@ jimport( 'joomla.filesystem.file');
 jimport( 'joomla.html.parameter' );
 
 
-JLoader::registerPrefix('Phocacart', JPATH_ADMINISTRATOR . '/components/com_phocacart/libraries/phocacart');
+if (file_exists(JPATH_ADMINISTRATOR . '/components/com_phocacart/libraries/bootstrap.php')) {
+	// Joomla 5 and newer
+	require_once(JPATH_ADMINISTRATOR . '/components/com_phocacart/libraries/bootstrap.php');
+} else {
+	// Joomla 4
+	JLoader::registerPrefix('Phocacart', JPATH_ADMINISTRATOR . '/components/com_phocacart/libraries/phocacart');
+}
 
 class plgPCVGoogle_conversion extends CMSPlugin
 {
@@ -60,9 +66,6 @@ class plgPCVGoogle_conversion extends CMSPlugin
 				$orderTotal = PhocacartOrder::getOrderTotal($order['id'], ['sbrutto', 'snetto', 'pbrutto', 'pnetto', 'tax']);
 
 
-
-
-
 				if (!empty($orderProducts)) {
 
 					$price = new PhocacartPrice();
@@ -84,7 +87,9 @@ class plgPCVGoogle_conversion extends CMSPlugin
 					$s[] = ' "affiliation": "'.$pC['store_title'].'",';
 					$s[] = ' "value": '.$value.',';
 					$s[] = ' "currency": "'.$order['currency_code'].'",';
-					$s[] = ' "tax": '.$orderTotal['tax']['amount'].',';
+					if (isset($orderTotal['tax']['amount']) && $orderTotal['tax']['amount'] != '') {
+						$s[] = ' "tax": ' . $orderTotal['tax']['amount'] . ',';
+					}
 					$s[] = ' "shipping": '.$deliveryPrice.',';
 					$s[] = ' "items": [';
 

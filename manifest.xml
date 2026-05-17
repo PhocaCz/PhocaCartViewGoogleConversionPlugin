@@ -1,3 +1,4 @@
+<?xml version="1.0" ?>
 <updates>
 	<update>
 		<name><![CDATA[ Phoca Cart View Google Conversion Plugin ]]></name>
@@ -16,7 +17,28 @@
 		<maintainer><![CDATA[ Phoca.cz ]]></maintainer>
 		<maintainerurl>https://www.phoca.cz/</maintainerurl>
 		<section>Updates</section>
-		<targetplatform name="joomla" version="4.[012]"/>
+		<targetplatform name="joomla" version="4\.*"/>
+		<client>site</client>
+	</update>
+	<update>
+		<name><![CDATA[ Phoca Cart View Google Conversion Plugin ]]></name>
+		<description><![CDATA[ Phoca Cart View - Google Conversion Tracking Plugin - plugin that inserts Google conversion tracking code into the website. ]]></description>
+		<element>google_conversion</element>
+		<folder>pcv</folder>
+		<type>plugin</type>
+		<version>6.1.0</version>
+		<infourl title="Phoca Cart View Google Conversion Plugin 6.1.0">https://www.phoca.cz/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartViewGoogleConversionPlugin/releases/download/6.1.0/plg_pcv_google_conversion_v6.1.0.zip</downloadurl>
+		</downloads>
+		<sha512>8600f32b9ea8031186d0327fc842be3fcc5d164d2df876c99030cf783815ef4ce682f43acb56b82855b82490055cdf3bd17680b93160d27207a53bde10dad954</sha512>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer><![CDATA[ Phoca.cz ]]></maintainer>
+		<maintainerurl>https://www.phoca.cz/</maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="(5|6)\.*"/>
 		<client>site</client>
 	</update>
 </updates>
